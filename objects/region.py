@@ -1,4 +1,4 @@
-from column import Column
+from objects.column import Column
 
 class Region:
     def __init__(self, name, volume, df):
@@ -23,7 +23,7 @@ class Region:
     
     def getDataframe(self):
         '''returns the region dataframe'''
-        return self._df
+        return self._df[:]
     
     def getColumns(self):
         '''returns the columns of the region dataframe'''
@@ -75,11 +75,11 @@ class Region:
 
     def getConventionalDataframe(self):
         '''returns the region dataframe of entries that have type of avocado conventional'''
-        return self._conventional_df
+        return self._conventional_df[:]
     
     def getOrganicDataframe(self):
         '''returns the region dataframe of entries that have type of avocado organic'''
-        return self._organic_df
+        return self._organic_df[:]
     
     def getSalesOfConventional(self):
         return self._conventional_df['TotalSales'].sum()

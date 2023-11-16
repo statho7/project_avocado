@@ -13,7 +13,7 @@ class Column:
     
     def getDataframe(self):
         '''returns the dataframe of the column'''
-        return self._df
+        return self._df[:]
     
     def getNullContents(self):
         '''returns the name of the column'''
